@@ -18,7 +18,11 @@ def part_1(input):
 
 
 def part_2(input):
-    pass
+    for line1 in input:
+        for line2 in input:
+            x = ''.join(a for a, b in zip(line1, line2) if a == b)
+            if len(x) == len(line1) - 1:
+                return x
 
 
-print(part_1(int_list))
+print(part_2(int_list))

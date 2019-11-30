@@ -14,6 +14,16 @@ class TestSum(unittest.TestCase):
         result = answer.part_1(data)
         self.assertEqual(result, 4)
 
+    def test_part_2_1(self):
+        data = ['aabbb', 'aaaaa', 'aabbc', 'abcde', 'cceds']
+        result = answer.part_2(data)
+        self.assertEqual(result, 'aabb')
+
+    def test_part_2_2(self):
+        data = ['bbcds', 'bdhsa', 'skajc', 'wksmc', 'abcds']
+        result = answer.part_2(data)
+        self.assertEqual(result, 'bcds')
+
 
 if __name__ == '__main__':
     unittest.main()
