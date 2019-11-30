@@ -12,12 +12,12 @@ def part_2(input):
     input_length = len(input)
     seen_freq = set()
     while True:
-        current_freq += input[i % input_length]
-        if current_freq in seen_freq:
-            return current_freq
-        else:
+        for line in input:
+            current_freq += int(line)
+            if current_freq in seen_freq:
+                return current_freq
+
             seen_freq.add(current_freq)
-            i += 1
 
 
 print(part_2(int_list))
