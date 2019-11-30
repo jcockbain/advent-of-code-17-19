@@ -8,7 +8,6 @@ def part_1(input):
 
 def part_2(input):
     current_freq = 0
-    i = 0
     input_length = len(input)
     seen_freq = set()
     while True:
