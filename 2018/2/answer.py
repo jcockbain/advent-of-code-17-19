@@ -1,6 +1,6 @@
 import collections
 
-input = open('2.txt').readlines()
+input = open('input.txt').readlines()
 int_list = [x.rstrip('\n') for x in input]
 
 

@@ -1,4 +1,4 @@
-input = open('1.txt').readlines()
+input = open('input.txt').readlines()
 int_list = [int(x) for x in input]
 
 
