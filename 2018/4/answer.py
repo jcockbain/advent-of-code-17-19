@@ -15,7 +15,13 @@ def part_1(input):
 
 
 def part_2(input):
-    pass
+    items = []
+    totals, minutes = gen_structure(input)
+    key = itemgetter(1)
+    for guard in minutes:
+        minute, count = max(minutes[guard].items(), key=key)
+        items.append((count, guard*minute))
+    return sorted(items)[-1][-1]
 
 
 def gen_structure(input):
@@ -32,8 +38,7 @@ def gen_structure(input):
             for m in range(m0, m1):
                 totals[guard] += 1
                 minutes[guard][m] += 1
-
     return totals, minutes
 
 
-print(part_1(input_list))
+print(part_2(input_list))
