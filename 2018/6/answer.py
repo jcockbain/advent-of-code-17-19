@@ -25,8 +25,15 @@ def part_1(points):
     return max(counts.values())
 
 
-def part_2(x):
-    pass
+def part_2(points):
+    count = 0
+    min_x, max_x = find_min_and_max_x(points)
+    min_y, max_y = find_min_and_max_y(points)
+    for y in range(min_y, max_y+1):
+        for x in range(min_x, max_x+1):
+            if sum(dist(x, y, px, py) for px, py in points) < 10000:
+                count += 1
+    return count
 
 
 def dist(x1, y1, x2, y2):
@@ -41,5 +48,5 @@ def find_min_and_max_y(points):
     return min(y for x, y in points), max(y for x, y in points)
 
 
-data = [(1, 2), (3, 2), (3, 3), (2, 2)]
 print(part_1(input_tuples))
+print(part_2(input_tuples))
