@@ -10,12 +10,12 @@ def part_1(x):
     return run_comp(x)
 
 
-def part_2(x):
+def part_2(x, target):
     for i in range(0, 99):
         for j in range(0, 99):
             x_copy = x.copy()
             x_copy[1], x_copy[2] = i, j
-            if run_comp(x_copy)[0] == 19690720:
+            if run_comp(x_copy)[0] == target:
                 return (100*i) + j
     return
 
@@ -32,4 +32,4 @@ def run_comp(x):
 
 
 print(part_1(int_list.copy())[0])
-print(part_2(int_list.copy()))
+print(part_2(int_list.copy(), 19690720))
