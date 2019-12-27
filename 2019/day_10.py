@@ -1,5 +1,6 @@
 import numpy as np
 import operator
+import os
 
 
 def slope(x1, y1, x2, y2):
@@ -82,7 +83,9 @@ def p2(inp, laser_pos):
 
 
 if __name__ == '__main__':
-    with open('inputs/10.in', 'r') as f:
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/10.in'
+    with open(filename, 'r') as f:
         file = f.read()
     inp = file.split('\n')
     max_pos, max_val = p1(inp)

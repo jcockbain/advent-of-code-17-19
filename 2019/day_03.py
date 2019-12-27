@@ -1,3 +1,5 @@
+import os
+
 deltas = {
     'R': (1, 0),
     'L': (-1, 0),
@@ -37,7 +39,9 @@ def find_points(directions):
 
 
 if __name__ == '__main__':
-    with open("inputs/03.in") as f:
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/03.in'
+    with open(filename) as f:
         input = f.read()
     path1, path2 = input.strip().split('\n')
     print('Part 1: ', find_manhattan_min(path1, path2))

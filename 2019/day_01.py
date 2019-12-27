@@ -1,5 +1,4 @@
-input = open('inputs/01.in').readlines()
-int_list = [int(x) for x in input]
+import os
 
 
 def part_1(input):
@@ -20,5 +19,9 @@ def part_2(input):
 
 
 if __name__ == "__main__":
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/01.in'
+    input = open(filename).readlines()
+    int_list = [int(x) for x in input]
     print("part 1: ", part_1(int_list))
     print("part 2: ", part_2(int_list))

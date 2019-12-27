@@ -1,3 +1,6 @@
+import os
+
+
 def part_1(input):
     total = 0
     s = {sat: orb for orb, sat in input}
@@ -30,6 +33,8 @@ def part_2(input):
 
 
 if __name__ == '__main__':
-    inp = [l.split(")") for l in open('inputs/06.in').read().split('\n')]
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/06.in'
+    inp = [l.split(")") for l in open(filename).read().split('\n')]
     print("part 1: ", part_1(inp))
     print("part 2: ", part_2(inp))

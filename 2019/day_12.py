@@ -2,6 +2,7 @@ import re
 from copy import deepcopy
 from itertools import count
 import math
+import os
 
 
 def parse_numbers(line, negatives=True):
@@ -71,6 +72,8 @@ def p2(moons):
 
 
 if __name__ == '__main__':
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/12.in'
     with open("inputs/12.in", "r") as f:
         file = f.read()
     inp = file.split('\n')

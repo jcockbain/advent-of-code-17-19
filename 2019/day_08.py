@@ -1,4 +1,5 @@
 import math
+import os
 
 
 def find_layers(inp, w, h):
@@ -35,7 +36,9 @@ def print_img(inp, w, h):
 
 
 if __name__ == '__main__':
-    inp = [int(l) for l in open('inputs/08.in').read()]
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/08.in'
+    inp = [int(l) for l in open(filename).read()]
     print("part 1: ", part_1(inp, 25, 6))
     p2 = part_2(inp, 25, 6)
     print("part_2: ")

@@ -1,6 +1,7 @@
 from operator import add, mul
 from collections import defaultdict
 from intcode import IntCode
+import os
 
 
 def run_robot(data, input):
@@ -42,7 +43,9 @@ def display(panels):
 
 
 if __name__ == '__main__':
-    with open('inputs/11.in') as f:
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/11.in'
+    with open(filename) as f:
         data = list(map(int, f.read().split(',')))
 
     p1 = run_robot(data[:], 0)

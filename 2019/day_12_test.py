@@ -1,11 +1,15 @@
 import unittest
+import os
 
 import day_12
+
+base = os.path.splitext(os.path.dirname(__file__))[
+    0]
 
 
 class TestSum(unittest.TestCase):
     def test_part_1_1(self):
-        with open('inputs/12_test_1.in', 'r') as f:
+        with open(base + '/inputs/12_test_1.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         energy = day_12.p1(inp, 10)
@@ -13,7 +17,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(energy, want)
 
     def test_part_1_2(self):
-        with open('inputs/12_test_2.in', 'r') as f:
+        with open(base + '/inputs/12_test_2.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         energy = day_12.p1(inp, 100)
@@ -21,7 +25,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(energy, want)
 
     def test_part_2_1(self):
-        with open('inputs/12_test_2.in', 'r') as f:
+        with open(base + '/inputs/12_test_2.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         steps = day_12.p2(inp)
