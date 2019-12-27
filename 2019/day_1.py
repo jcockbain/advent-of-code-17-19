@@ -4,7 +4,7 @@ int_list = [int(x) for x in input]
 
 def part_1(input):
     total = 0
-    for value in inwput:
+    for value in input:
         total += int(value / 3) - 2
     return total
 

@@ -49,13 +49,13 @@ class TestSum(unittest.TestCase):
         self.assertEqual(pos, (11, 13))
         self.assertEqual(asteroids_seen, want)
 
-    def test_part_2_1(self):
-        with open('inputs/10_test_5.in', 'r') as f:
-            file = f.read()
-        inp = file.split('\n')
-        asteroids_seen = day_10.p2(inp, (11, 13))
-        want = 802
-        self.assertEqual(asteroids_seen, want)
+    # def test_part_2_1(self):
+    #     with open('inputs/10_test_5.in', 'r') as f:
+    #         file = f.read()
+    #     inp = file.split('\n')
+    #     asteroids_seen = day_10.p2(inp, (11, 13))
+    #     want = 802
+    #     self.assertEqual(asteroids_seen, want)
 
 
 if __name__ == '__main__':

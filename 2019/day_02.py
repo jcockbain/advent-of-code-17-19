@@ -1,9 +1,5 @@
 import re
 
-input = open('inputs/02.in').readlines()
-
-int_list = list(map(int, re.findall(r'\d+', input[0])))
-
 
 def part_1(x):
     x[1], x[2] = 2, 12
@@ -32,5 +28,7 @@ def run_comp(x):
 
 
 if __name__ == "__main__":
+    input = open('inputs/02.in').readlines()
+    int_list = list(map(int, re.findall(r'\d+', input[0])))
     print("part 1: ", part_1(int_list.copy())[0])
     print("part 2: ", part_2(int_list.copy(), 19690720))

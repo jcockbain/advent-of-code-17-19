@@ -22,23 +22,23 @@ class TestSum(unittest.TestCase):
         want = 52432133
         self.assertEqual(ans, want)
 
-    def test_part_2_1(self):
-        inp = "03036732577212944063491565474664"
-        ans = day_16.p2(inp)
-        want = 84462026
-        self.assertEqual(ans, want)
+    # def test_part_2_1(self):
+    #     inp = "03036732577212944063491565474664"
+    #     ans = day_16.p2(inp)
+    #     want = 84462026
+    #     self.assertEqual(ans, want)
 
-    def test_part_2_2(self):
-        inp = "02935109699940807407585447034323"
-        ans = day_16.p2(inp)
-        want = 78725270
-        self.assertEqual(ans, want)
+    # def test_part_2_2(self):
+    #     inp = "02935109699940807407585447034323"
+    #     ans = day_16.p2(inp)
+    #     want = 78725270
+    #     self.assertEqual(ans, want)
 
-    def test_part_2_3(self):
-        inp = "03081770884921959731165446850517"
-        ans = day_16.p2(inp)
-        want = 53553731
-        self.assertEqual(ans, want)
+    # def test_part_2_3(self):
+    #     inp = "03081770884921959731165446850517"
+    #     ans = day_16.p2(inp)
+    #     want = 53553731
+    #     self.assertEqual(ans, want)
 
 
 if __name__ == '__main__':
