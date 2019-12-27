@@ -1,3 +1,6 @@
+import os
+
+
 def multiplier(n, m):
     m += 1
     m %= 4 * n
@@ -36,6 +39,8 @@ def p2(values):
 
 
 if __name__ == '__main__':
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/16.in'
     file = open('inputs/16.in', 'r')
     data = file.read().strip()
     part1 = data[:]

@@ -1,4 +1,5 @@
 import re
+import os
 
 
 def part_1(x):
@@ -28,7 +29,9 @@ def run_comp(x):
 
 
 if __name__ == "__main__":
-    input = open('inputs/02.in').readlines()
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/02.in'
+    input = open(filename).readlines()
     int_list = list(map(int, re.findall(r'\d+', input[0])))
     print("part 1: ", part_1(int_list.copy())[0])
     print("part 2: ", part_2(int_list.copy(), 19690720))

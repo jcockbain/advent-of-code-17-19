@@ -1,5 +1,6 @@
 from intcode import IntCode
 from itertools import permutations
+import os
 
 
 def part_1(data):
@@ -15,7 +16,9 @@ def part_1(data):
 
 
 if __name__ == '__main__':
-    file = open('inputs/07.in', "r")
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/07.in'
+    file = open(filename, "r")
     data = list(map(lambda x: int(x), file.read().split(',')))
     print('part 1:', part_1(data))
     # print('part 2:', part_2(data))

@@ -1,4 +1,5 @@
 from intcode import IntCode
+import os
 
 
 def get_input():
@@ -28,7 +29,9 @@ def display(grid):
 
 
 if __name__ == "__main__":
-    with open('inputs/13.in') as f:
+    filename = os.path.splitext(os.path.dirname(__file__))[
+        0] + 'inputs/13.in'
+    with open(filename) as f:
         data = list(map(int, f.read().split(',')))
 
     # print(data)

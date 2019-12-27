@@ -1,11 +1,15 @@
 import unittest
+import os
 
 import day_10
+
+base = os.path.splitext(os.path.dirname(__file__))[
+    0]
 
 
 class TestSum(unittest.TestCase):
     def test_part_1_1(self):
-        with open('inputs/10_test_1.in', 'r') as f:
+        with open(base + '/inputs/10_test_1.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         pos, asteroids_seen = day_10.p1(inp)
@@ -14,7 +18,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(asteroids_seen, want)
 
     def test_part_1_2(self):
-        with open('inputs/10_test_2.in', 'r') as f:
+        with open(base + '/inputs/10_test_2.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         pos, asteroids_seen = day_10.p1(inp)
@@ -23,7 +27,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(asteroids_seen, want)
 
     def test_part_1_3(self):
-        with open('inputs/10_test_3.in', 'r') as f:
+        with open(base + '/inputs/10_test_3.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         pos, asteroids_seen = day_10.p1(inp)
@@ -32,7 +36,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(asteroids_seen, want)
 
     def test_part_1_4(self):
-        with open('inputs/10_test_4.in', 'r') as f:
+        with open(base + '/inputs/10_test_4.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         pos, asteroids_seen = day_10.p1(inp)
@@ -41,7 +45,7 @@ class TestSum(unittest.TestCase):
         self.assertEqual(asteroids_seen, want)
 
     def test_part_1_5(self):
-        with open('inputs/10_test_5.in', 'r') as f:
+        with open(base + '/inputs/10_test_5.in', 'r') as f:
             file = f.read()
         inp = file.split('\n')
         pos, asteroids_seen = day_10.p1(inp)
