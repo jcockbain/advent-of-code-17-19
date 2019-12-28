@@ -44,5 +44,3 @@ if __name__ == '__main__':
     data = list(map(int, data.split(',')))
     d1, d2 = data[:], data[:]
     print("part 1: ", p1(d1))
-
-    vm = IntCode(data)
