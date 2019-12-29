@@ -2,9 +2,8 @@ from intcode import IntCode
 
 
 def p1(data):
+    pass
 
-
-pass
 
 if __name__ == "__main__":
     with open("inputs/21.in", "r") as f:

@@ -42,6 +42,17 @@ def p1(instructions, card_length):
     return cards
 
 
+def shuffle(cards):
+    for instruction in instructions:
+        code, value = process_instruction(instruction)
+        if code == "cut":
+            cards = cut(cards, value)
+        elif code == "increment":
+            cards = deal_inc(cards, value)
+        elif code == "new_stack":
+            cards = deal_new_stack(cards)
+
+
 if __name__ == "__main__":
     with open("inputs/22.in", "r") as f:
         instructions = f.read().split('\n')
@@ -50,4 +61,9 @@ if __name__ == "__main__":
 
     print("part 1:", p1_deck.index(2019))
 
-    print("part 2:")
+    p2_deck = [i for i in range(0, 10007)]
+
+    for _ in range(101741582076661):
+        shuffle(p2_deck)
+
+    print("part 2:", p2_deck[2020])
