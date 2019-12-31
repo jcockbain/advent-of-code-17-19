@@ -24,7 +24,7 @@ def print_world(grid):
     for point in grid:
         result += grid[point]
         x += 1
-        if x == W+1 and y != H:
+        if x == W + 1 and y != H:
             y += 1
             x = 0
             result += "\n"
@@ -34,9 +34,7 @@ def print_world(grid):
 def get_grid(world):
     grid = {}
     W, H = len(world[0]), len(world)
-    for y in range(H):
-        for x in range(W):
-            grid[(x, y)] = world[y][x]
+    grid = {(x, y): world[y][x] for y in range(H) for x in range(W)}
     return grid
 
 
