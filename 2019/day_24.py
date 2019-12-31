@@ -8,21 +8,12 @@ def iter(grid):
         alive_nbs = 0
         nbs = get_nbs(point)
         for n in nbs:
-            try:
-                if is_alive(grid[n]):
-                    alive_nbs += 1
-            except KeyError:
-                alive_nbs += 0
+            if n in grid and is_alive(grid[n]):
+                alive_nbs += 1
         if is_alive(grid[point]):
-            if alive_nbs == 1:
-                new_grid[point] = "#"
-            else:
-                new_grid[point] = "."
+            new_grid[point] = "#" if alive_nbs == 1 else "."
         else:
-            if 1 <= alive_nbs <= 2:
-                new_grid[point] = "#"
-            else:
-                new_grid[point] = "."
+            new_grid[point] = "#" if 1 <= alive_nbs <= 2 else "."
     return new_grid
 
 
@@ -87,4 +78,4 @@ if __name__ == "__main__":
     with open("inputs/24.in", "r") as f:
         file = f.read()
     data = file.split("\n")
-    print("part 1", p1(data))
+    print("part 1:  ", p1(data))
