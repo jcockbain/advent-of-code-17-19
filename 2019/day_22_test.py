@@ -51,25 +51,33 @@ class TestSum(unittest.TestCase):
         self.assertEqual(value, None)
 
     def test_1(self):
-        with open("inputs/22_test_1.in", "r") as f:
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/22_test_1.in'
+        with open(filename, "r") as f:
             instructions = f.read().split('\n')
         result = day_22.p1(instructions, 10)
         self.assertEqual(result, [0, 3, 6, 9, 2, 5, 8, 1, 4, 7])
 
     def test_2(self):
-        with open("inputs/22_test_2.in", "r") as f:
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/22_test_2.in'
+        with open(filename, "r") as f:
             instructions = f.read().split('\n')
         result = day_22.p1(instructions, 10)
         self.assertEqual(result, [3, 0, 7, 4, 1, 8, 5, 2, 9, 6])
 
     def test_3(self):
-        with open("inputs/22_test_3.in", "r") as f:
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/22_test_3.in'
+        with open(filename, "r") as f:
             instructions = f.read().split('\n')
         result = day_22.p1(instructions, 10)
         self.assertEqual(result, [6, 3, 0, 7, 4, 1, 8, 5, 2, 9])
 
     def test_4(self):
-        with open("inputs/22_test_4.in", "r") as f:
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/22_test_4.in'
+        with open(filename, "r") as f:
             instructions = f.read().split('\n')
         result = day_22.p1(instructions, 10)
         self.assertEqual(result, [9, 2, 5, 8, 1, 4, 7, 0, 3, 6])

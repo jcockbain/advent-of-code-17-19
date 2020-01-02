@@ -60,25 +60,42 @@ class TestSum(unittest.TestCase):
         self.assertEqual(actual, 9)
 
     def test_iter_1(self):
-        with open("inputs/24_test_1.in", "r") as f:
+        filename1 = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/24_test_1.in'
+        with open(filename1, "r") as f:
             data = f.read().split("\n")
         grid = day_24.get_grid(data)
         result = day_24.iter(grid)
         printed = day_24.print_world(result)
-        with open("inputs/24_test_1_expected.in", "r") as f:
+        filename2 = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/24_test_1_expected.in'
+        with open(filename2, "r") as f:
             expected = f.read()
         self.assertEqual(printed, expected)
 
     def test_iter_2(self):
-        with open("inputs/24_test_1.in", "r") as f:
+        filename1 = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/24_test_1.in'
+        with open(filename1, "r") as f:
             data = f.read().split("\n")
         grid = day_24.get_grid(data)
         for _ in range(4):
             grid = day_24.iter(grid)
         printed = day_24.print_world(grid)
-        with open("inputs/24_test_4_expected.in", "r") as f:
+        filename2 = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/24_test_4_expected.in'
+        with open(filename2) as f:
             expected = f.read()
         self.assertEqual(printed, expected)
+
+    def test_q_1(self):
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/24.in'
+        with open(filename, "r") as f:
+            file = f.read()
+        data = file.split("\n")
+        answer = day_24.p1(data)
+        self.assertEqual(answer, 32526865)
 
 
 if __name__ == "__main__":

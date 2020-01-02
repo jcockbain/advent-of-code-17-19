@@ -17,6 +17,10 @@ def iter(grid):
     return new_grid
 
 
+def iter_2(grid):
+    pass
+
+
 def print_world(grid):
     x, y = 0, 0
     H, W = get_dimensions_of_grid(grid)
@@ -58,6 +62,11 @@ def p1(data):
             break
         history.append(grid)
     return get_biodiversity_rating(grid)
+
+
+def p2(data, minutes):
+    grid = get_grid(data)
+    return data
 
 
 def get_biodiversity_rating(grid):
