@@ -44,6 +44,7 @@ instructions = [
     'west',
 ]
 
+
 def powerset(s):
     x = len(s)
     masks = [1 << i for i in range(x)]

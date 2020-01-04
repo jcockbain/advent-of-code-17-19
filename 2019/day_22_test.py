@@ -53,34 +53,48 @@ class TestSum(unittest.TestCase):
     def test_1(self):
         filename = os.path.splitext(os.path.dirname(__file__))[
             0] + '/inputs/22_test_1.in'
+        cards = [i for i in range(0, 10)]
         with open(filename, "r") as f:
             instructions = f.read().split('\n')
-        result = day_22.p1(instructions, 10)
+        result = day_22.shuffle_pack(cards, instructions)
         self.assertEqual(result, [0, 3, 6, 9, 2, 5, 8, 1, 4, 7])
 
     def test_2(self):
         filename = os.path.splitext(os.path.dirname(__file__))[
             0] + '/inputs/22_test_2.in'
+        cards = [i for i in range(0, 10)]
         with open(filename, "r") as f:
             instructions = f.read().split('\n')
-        result = day_22.p1(instructions, 10)
+        result = day_22.shuffle_pack(cards, instructions)
         self.assertEqual(result, [3, 0, 7, 4, 1, 8, 5, 2, 9, 6])
 
     def test_3(self):
         filename = os.path.splitext(os.path.dirname(__file__))[
             0] + '/inputs/22_test_3.in'
+        cards = [i for i in range(0, 10)]
         with open(filename, "r") as f:
             instructions = f.read().split('\n')
-        result = day_22.p1(instructions, 10)
+        result = day_22.shuffle_pack(cards, instructions)
         self.assertEqual(result, [6, 3, 0, 7, 4, 1, 8, 5, 2, 9])
 
     def test_4(self):
         filename = os.path.splitext(os.path.dirname(__file__))[
             0] + '/inputs/22_test_4.in'
+        cards = [i for i in range(0, 10)]
         with open(filename, "r") as f:
             instructions = f.read().split('\n')
-        result = day_22.p1(instructions, 10)
+        result = day_22.shuffle_pack(cards, instructions)
         self.assertEqual(result, [9, 2, 5, 8, 1, 4, 7, 0, 3, 6])
+
+    def test_question(self):
+        filename = os.path.splitext(os.path.dirname(__file__))[
+            0] + '/inputs/22.in'
+        with open(filename, "r") as f:
+            instructions = f.read().split('\n')
+        result_1 = day_22.p1(instructions, 10007)
+        result_2 = day_22.p2(instructions)
+        self.assertEqual(result_1, 4703)
+        self.assertEqual(result_2, 55627600867625)
 
 
 if __name__ == '__main__':
